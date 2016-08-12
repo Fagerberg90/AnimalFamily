@@ -10,8 +10,7 @@ namespace AnimalFamily
     {
         public Cat(int age, string name, string fav_food, string breed, bool hungry) : base(age, name, fav_food, breed, hungry)
         {
-            fav_food = "cat food";
-
+            fav_food = HungryAnimal();
         }
 
         public override string HungryAnimal()
@@ -22,12 +21,10 @@ namespace AnimalFamily
             {
                 return "found a mouse in the wood";
             }
-
             else
             {
                 return "Still looking/hunting for food...";
             }
-
         }
 
         public override string Interact(Ball ball)
@@ -36,14 +33,9 @@ namespace AnimalFamily
             return base.Interact(ball);
         }
 
-
-
-
-    public override string ToString()
+        public override string ToString()
         {
-            return $"my cat name is {name} and i am {age} years old. My best food is {fav_food}";
+            return $"my cats name is {name} and i am {age} years old. My best food is {fav_food}";
         }
-
-
     }
 }

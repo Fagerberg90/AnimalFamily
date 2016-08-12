@@ -11,9 +11,7 @@ namespace AnimalFamily
         public Dog(int age, string name, string fav_food, string breed, bool hungry) : base(age, name, fav_food, breed, hungry)
         {
 
-
         }
-
         public override string Interact(Ball ball)
         {
             ball.LowerQuality(3);
@@ -22,7 +20,7 @@ namespace AnimalFamily
 
         public override string ToString()
         {
-            return $"my dog name is {name} and i am a {breed} and is {age} years old. The best food is {fav_food}";
+            return $"my dogs name is {name} and i am a {breed} and is {age} years old. The best food is {fav_food}";
         }
     }
 }

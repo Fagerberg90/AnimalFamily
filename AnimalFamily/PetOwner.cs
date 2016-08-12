@@ -22,15 +22,12 @@ namespace AnimalFamily
         }
         public void Menu()
         {
-
-
             string choice = string.Empty;
 
-
-            Console.Clear();
+          
             Console.WriteLine("---- Menu ----\n");
 
-            Console.WriteLine("I´m Joppe and is 24 years old.\nChoose a option for me.");
+            Console.WriteLine("Choose a option for me.");
 
             Console.WriteLine("\n1. Play fetch ");
             Console.WriteLine("2. Feed animal");
@@ -41,8 +38,6 @@ namespace AnimalFamily
             Console.WriteLine();
 
             choice = Console.ReadLine();
-
-
 
             switch (choice)   // which number you take it goes to a method.
             {
@@ -58,7 +53,6 @@ namespace AnimalFamily
                 case "4":
                     Console.WriteLine("Exit");
                     break;
-
                 default:
                     Console.WriteLine("--try again--");
                     break;
@@ -66,13 +60,13 @@ namespace AnimalFamily
             Console.ReadLine();
             Menu();
         }
-
         public void Feed(string food)
         {
             Console.WriteLine("[D]og food");
             Console.WriteLine("[P]uppy food");
             Console.WriteLine("[C]at food");
             Console.WriteLine("[E]xit");
+
             string input = Console.ReadLine();
 
             switch (input.ToUpper())
@@ -81,11 +75,9 @@ namespace AnimalFamily
                     foreach (Animal petDog in pets)
                     {
                         var dog = petDog as Dog; //sätter varje djur som klassen dog
-
                         if (dog != null) //om detta lyckas, dvs dog inte är null
                         {
                             petDog.Eat("dog food");
-
                         }
                     }
                     break;
@@ -93,7 +85,6 @@ namespace AnimalFamily
                     foreach (Animal petPuppy in pets)
                     {
                         var puppy = petPuppy as Puppy;
-
                         if (puppy != null)
                         {
                             petPuppy.Eat("puppy food");
@@ -104,13 +95,10 @@ namespace AnimalFamily
                     foreach (Animal petCat in pets)
                     {
                         var cat = petCat as Cat;
-
                         if (cat != null)
                         {
                             petCat.Eat("cat food");
-                        
-                        }                     
-
+                        }
                     }
                     break;
                 case "E":
@@ -125,34 +113,24 @@ namespace AnimalFamily
         {
             Console.WriteLine(ball.ToString());
         }
-        
-            public void Fetch()
+        public void Fetch()
         {
-
-
             Console.WriteLine(" Throwing the ball ");
 
             foreach (Animal pet in pets)
             {
-                Console.Write(pet.name + " ");
+                Console.Write(pet.name + "," + " ");
             }
 
-            Console.Write("is chasing the ball");
-
-
+            Console.Write("is chasing the ball.");
             Random random = new Random();
             int randomNumber = random.Next(0, pets.Count());
             Console.WriteLine();
-            Console.WriteLine(pets[randomNumber].name + " catches the ball and brings it back");
+            Console.WriteLine(pets[randomNumber].name + " catches the ball and brings it back to you.");
 
             pets[randomNumber].Interact(ball);
             Console.WriteLine(ball.ToString());
         }
-
-
-
-
-
         public void ListAnimals()
         {
             foreach (Animal pet in pets)

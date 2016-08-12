@@ -23,7 +23,7 @@ namespace AnimalFamily
 
         public override string ToString()
         {
-           return $"my puppy name is {name} and i am {Months} month old";
+           return $"my puppys name is {name} and i am {Months} month old";
     }
     }
 }

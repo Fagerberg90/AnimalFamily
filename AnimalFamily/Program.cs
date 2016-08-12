@@ -12,7 +12,7 @@ namespace AnimalFamily
         {
             var animalCat = new Cat(10, " Kalle", "cat food", "farmcat", true);
             var animalDog = new Dog(7, " Dexter", "dog food", "schäfer", false);
-            var animalPuppy = new Puppy(0, "Cassie", "puppyfood", "boxer", true,5);
+            var animalPuppy = new Puppy(0, "Cassie", "puppyfood", "boxer", true, 5);
 
             var animals = new List<Animal>();
 
@@ -24,13 +24,11 @@ namespace AnimalFamily
 
 
             var ownerName = new PetOwner("Joppe", 24, animals, playBall);
-
+            Console.WriteLine(ownerName.ToString());
             
             ownerName.Menu();
-           
-
 
             Console.ReadLine();
-       }
+        }
     }
 }

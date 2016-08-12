@@ -21,22 +21,17 @@ namespace AnimalFamily
             this.fav_food = fav_food;
             this.breed = breed;
             this.hungry = hungry;
-
         }
 
         public void Eat(string food)     //method with two inparamters and check if the animal are hungry
         {
-
-
             Console.WriteLine("Feeding" + " " + name + " " + food);
 
             if (food == fav_food && hungry == true)
             {
                 hungry = false;
                 Console.WriteLine("nom nom nom");
-
             }
-
             else if (hungry == true)
             {
                 Console.WriteLine(HungryAnimal());
@@ -46,20 +41,10 @@ namespace AnimalFamily
                 Console.WriteLine(name + " is not hungry");
             }
         }
-
-
         public virtual string Interact(Ball ball)           //See how much the ball can take
         {
-
-
             return $"When {name} have played with the {ball} its still fine";
-
-
-
         }
-
-
-
         public virtual string HungryAnimal()    // standard text if the animal is hungry
         {
             return $"Give the right food....";
