@@ -10,8 +10,8 @@ namespace AnimalFamily
     {
         static void Main(string[] args)
         {
-            var animalCat = new Cat(10, " Kalle", "cat food", "farmcat", true);
-            var animalDog = new Dog(7, " Dexter", "dog food", "schäfer", false);
+            var animalCat = new Cat(10, "Kallekatt", "cat food", "farmcat", false);
+            var animalDog = new Dog(7, "Dexter", "dog food", "terrier", true);
             var animalPuppy = new Puppy(0, "Cassie", "puppyfood", "boxer", true, 5);
 
             var animals = new List<Animal>();

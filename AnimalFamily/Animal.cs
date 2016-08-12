@@ -38,7 +38,8 @@ namespace AnimalFamily
             }
             else
             {
-                Console.WriteLine(name + " is not hungry");
+                Console.WriteLine(name + " is not hungry." + "\n" + HungryAnimal());
+
             }
         }
         public virtual string Interact(Ball ball)           //See how much the ball can take
@@ -47,7 +48,7 @@ namespace AnimalFamily
         }
         public virtual string HungryAnimal()    // standard text if the animal is hungry
         {
-            return $"Give the right food....";
+            return $"Take it away from the pet and give the right food please....";
         }
     }
 }

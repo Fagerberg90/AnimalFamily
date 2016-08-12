@@ -19,11 +19,11 @@ namespace AnimalFamily
             var musjakt = rnd.Next(1, 100);
             if (musjakt >= 50)
             {
-                return "found a mouse in the wood";
+                return " found a mouse in the wood";
             }
             else
             {
-                return "Still looking/hunting for food...";
+                return " Still looking/hunting for food...";
             }
         }
 

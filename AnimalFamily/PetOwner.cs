@@ -115,7 +115,7 @@ namespace AnimalFamily
         }
         public void Fetch()
         {
-            Console.WriteLine(" Throwing the ball ");
+            Console.WriteLine("Throwing the ball ");
 
             foreach (Animal pet in pets)
             {
