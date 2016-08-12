@@ -8,30 +8,21 @@ namespace AnimalFamily
 {
     public class Dog : Animal
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-
         public Dog(int age, string name, string fav_food, string breed, bool hungry) : base(age, name, fav_food, breed, hungry)
         {
-            Name = name;
-            Age = age;
-            fav_food = "dog food";
+
+
         }
-
-
-
 
         public override string Interact(Ball ball)
         {
+            ball.LowerQuality(3);
             return base.Interact(ball);
         }
 
-
-
-
         public override string ToString()
         {
-            return $"the dogs name is {name} and the breeds are {breed} and he is {age} years old. The best food is {fav_food}";
+            return $"my dog name is {name} and i am a {breed} and is {age} years old. The best food is {fav_food}";
         }
     }
 }

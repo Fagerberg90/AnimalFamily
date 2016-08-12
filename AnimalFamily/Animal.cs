@@ -6,45 +6,61 @@ using System.Threading.Tasks;
 
 namespace AnimalFamily
 {
-    public class Animal
+    public abstract class Animal
     {
         protected int age;                  //Protected field
-        protected string name;
+        public string name { get; protected set; }
         protected string fav_food;
         protected string breed;
         protected bool hungry;
 
         public Animal(int age, string name, string fav_food, string breed, bool hungry)    //constructor
         {
-          
+            this.age = age;
+            this.name = name;
+            this.fav_food = fav_food;
+            this.breed = breed;
+            this.hungry = hungry;
+
         }
 
-        public void Eat(string food, Animal animal)     //method with two inparamters and check if the animal are hungry
+        public void Eat(string food)     //method with two inparamters and check if the animal are hungry
         {
-            if (food == animal.fav_food)
+
+
+            Console.WriteLine("Feeding" + " " + name + " " + food);
+
+            if (food == fav_food && hungry == true)
             {
-                animal.hungry = false;
+                hungry = false;
+                Console.WriteLine("nom nom nom");
+
             }
 
+            else if (hungry == true)
+            {
+                Console.WriteLine(HungryAnimal());
+            }
             else
             {
-                HungryAnimal();
+                Console.WriteLine(name + " is not hungry");
             }
         }
 
+
         public virtual string Interact(Ball ball)           //See how much the ball can take
-         { 
+        {
 
-            
-                 return $"When {name} have played with the {ball} its still fine"; 
- 
- 
-            
-         }
+
+            return $"When {name} have played with the {ball} its still fine";
 
 
 
-    public virtual string HungryAnimal()    // standard text if the animal is hungry
+        }
+
+
+
+        public virtual string HungryAnimal()    // standard text if the animal is hungry
         {
             return $"Give the right food....";
         }

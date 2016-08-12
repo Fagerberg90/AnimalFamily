@@ -10,23 +10,20 @@ namespace AnimalFamily
     {
         public int Months { get; set; }
 
-        public Puppy(int age, string name, string fav_food, string breed, bool hungry) : base(age, name, fav_food, breed, hungry)
+        public Puppy(int age, string name, string fav_food, string breed, bool hungry,int months) : base(age, name, fav_food, breed, hungry)
         {
-            
-            age = 0;
+            Months = months;
         }
-
-
 
         public override string Interact(Ball ball)
         {
+            ball.LowerQuality(2);
             return base.Interact(ball);
         }
 
-
         public override string ToString()
         {
-           return $"the puppys name is {Name} and is {Months} month old";
+           return $"my puppy name is {name} and i am {Months} month old";
     }
     }
 }

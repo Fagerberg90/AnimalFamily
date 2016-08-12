@@ -10,28 +10,32 @@ namespace AnimalFamily
     {
         private string colour;
         private int quality;
-      
 
         public Ball(string colour,int quality)
         {
             this.colour = colour;
-            this.quality = quality;
-        
+            this.quality = 10;
+
         }
 
-    public void LowerQuality(int tal=0)
+        public void LowerQuality(int tal)
         {
-            if (quality<tal)
+            if (quality > 0)
             {
-               
+                quality = quality - tal;
+                Console.WriteLine("The " + colour + " ball took some damage");
             }
-          
+            else
+            {
+                Console.WriteLine("The " + colour + " ball is broken");
+            }
+
 
         }
 
         public override string ToString()
         {
-            return $"The {colour} ball has {quality} left.";
+            return $"The {colour} ball has {quality} left";
         }
     }
 }

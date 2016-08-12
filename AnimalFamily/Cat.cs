@@ -8,12 +8,10 @@ namespace AnimalFamily
 {
     public class Cat : Animal
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-
         public Cat(int age, string name, string fav_food, string breed, bool hungry) : base(age, name, fav_food, breed, hungry)
         {
             fav_food = "cat food";
+
         }
 
         public override string HungryAnimal()
@@ -29,13 +27,15 @@ namespace AnimalFamily
             {
                 return "Still looking/hunting for food...";
             }
+
         }
 
-
         public override string Interact(Ball ball)
-        { 
-            return base.Interact(ball); 
-         }
+        {
+            ball.LowerQuality(1);
+            return base.Interact(ball);
+        }
+
 
 
 
